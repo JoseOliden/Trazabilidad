@@ -10,29 +10,34 @@ class PDFReporteKayZero(FPDF):
         self.set_font("Arial", "B", 12)
         self.cell(0, 10, "INSTITUTO PERUANO DE ENERGÍA NUCLEAR - LABORATORIO AAN", ln=True, align="C")
         self.set_font("Arial", "", 10)
-        self.cell(0, 10, "Reporte de Resultados - Activación Neutrónica (Método k₀)", ln=True, align="C")
-        #self.cell(0, 10, "Reporte de Resultados - Activacion Neutronica (Metodo k0)", ln=True, align="C")
+        #self.cell(0, 10, "Reporte de Resultados - Activación Neutrónica (Método k₀)", ln=True, align="C")
+        self.cell(0, 10, "Reporte de Resultados - Activacion Neutronica (Metodo k0)", ln=True, align="C")
         self.ln(10)
 
     def footer(self):
         self.set_y(-15)
         self.set_font("Arial", "I", 8)
-        self.cell(0, 10, f'Página {self.page_no()}', align="C")
+        #self.cell(0, 10, f'Página {self.page_no()}', align="C")
+        self.cell(0, 10, f'Pagina {self.page_no()}', align="C")
+
 
     def info_general(self, datos):
         self.set_font("Arial", "", 10)
         self.cell(0, 10, f"Cliente: {datos['cliente']}", ln=True)
         self.cell(0, 10, f"Lote ID: {datos['lote_id']}", ln=True)
-        self.cell(0, 10, f"Fecha de Recepción: {datos['fecha_recepcion']}", ln=True)
+        #self.cell(0, 10, f"Fecha de Recepción: {datos['fecha_recepcion']}", ln=True)
+        self.cell(0, 10, f"Fecha de Recepcion: {datos['fecha_recepcion']}", ln=True)
         self.cell(0, 10, f"Analista: {datos['analista']}", ln=True)
-        self.cell(0, 10, f"Método: {datos['metodo']}", ln=True)
+        #self.cell(0, 10, f"Método: {datos['metodo']}", ln=True)
+        self.cell(0, 10, f"Metodo: {datos['metodo']}", ln=True)
         self.ln(5)
 
     def datos_muestra(self, muestra):
         self.set_font("Arial", "B", 10)
         self.cell(0, 10, "Datos de la muestra", ln=True)
         self.set_font("Arial", "", 10)
-        self.cell(0, 10, f"Código de Muestra: {muestra['codigo']}", ln=True)
+        #self.cell(0, 10, f"Código de Muestra: {muestra['codigo']}", ln=True)
+        self.cell(0, 10, f"Codigo de Muestra: {muestra['codigo']}", ln=True)
         self.cell(0, 10, f"Fecha de Irradiación: {muestra['fecha_irradiacion']}", ln=True)
         self.cell(0, 10, f"Fecha de Conteo: {muestra['fecha_conteo']}", ln=True)
         self.cell(0, 10, f"Tiempo de Conteo: {muestra['tiempo_conteo_s']} s", ln=True)
