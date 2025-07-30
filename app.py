@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-from fpdf2 import FPDF
+from fpdf import FPDF
 import tempfile
 import os
 
