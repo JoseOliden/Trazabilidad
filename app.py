@@ -8,7 +8,8 @@ import os
 class PDFReporteKayZero(FPDF):
     def header(self):
         self.set_font("Arial", "B", 12)
-        self.cell(0, 10, "INSTITUTO PERUANO DE ENERGÍA NUCLEAR - LABORATORIO AAN", ln=True, align="C")
+        #self.cell(0, 10, "INSTITUTO PERUANO DE ENERGÍA NUCLEAR - LABORATORIO AAN", ln=True, align="C")
+        self.cell(0, 10, "INSTITUTO PERUANO DE ENERGIA NUCLEAR - LABORATORIO AAN", ln=True, align="C")
         self.set_font("Arial", "", 10)
         #self.cell(0, 10, "Reporte de Resultados - Activación Neutrónica (Método k₀)", ln=True, align="C")
         self.cell(0, 10, "Reporte de Resultados - Activacion Neutronica (Metodo k0)", ln=True, align="C")
@@ -47,7 +48,8 @@ class PDFReporteKayZero(FPDF):
 
     def tabla_resultados(self, resultados):
         self.set_font("Arial", "B", 10)
-        self.cell(0, 10, "Resultados de concentración (ppm)", ln=True)
+        #self.cell(0, 10, "Resultados de concentración (ppm)", ln=True)
+        self.cell(0, 10, "Resultados de concentracion (ppm)", ln=True)
         self.set_font("Arial", "B", 9)
         self.cell(40, 8, "Elemento", border=1)
         self.cell(40, 8, "Nuclido", border=1)
@@ -80,7 +82,8 @@ if uploaded_file:
     st.write(f"**Cliente:** {datos['cliente']}")
     st.write(f"**Lote ID:** {datos['lote_id']}")
     st.write(f"**Muestra:** {datos['muestra']['codigo']}")
-    st.write(f"**Método:** {datos['metodo']}")
+    #st.write(f"**Método:** {datos['metodo']}"
+    st.write(f"**Metodo:** {datos['metodo']}")
 
     st.subheader("Resultados")
     st.table(datos["muestra"]["resultados"])
