@@ -10,7 +10,7 @@ class PDFReporteKayZero(FPDF):
         self.set_font("Arial", "B", 12)
         self.cell(0, 10, "INSTITUTO PERUANO DE ENERGÍA NUCLEAR - LABORATORIO AAN", ln=True, align="C")
         self.set_font("Arial", "", 10)
-        self.cell(0, 10, "Reporte de Resultados - Activación Neutrónica (Método k₀)", ln=True, align="C")
+        self.cell(0, 10, "Reporte de Resultados - Activación Neutrónica (Método k0)", ln=True, align="C")
         self.ln(10)
 
     def footer(self):
