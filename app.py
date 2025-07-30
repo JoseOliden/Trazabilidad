@@ -72,7 +72,7 @@ if uploaded_file:
     st.write(f"**Cliente:** {datos['cliente']}")
     st.write(f"**Lote ID:** {datos['lote_id']}")
     st.write(f"**Muestra:** {datos['muestra']['codigo']}")
-    st.write(f"**Método:** {datos['metodo']}"
+    st.write(f"**Método:** {datos['metodo']}")
 
     st.subheader("Resultados")
     st.table(datos["muestra"]["resultados"])
